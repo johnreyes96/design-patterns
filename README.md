@@ -1,5 +1,7 @@
 # Design patterns with OOP paradigm in Java
 
+![License](https://img.shields.io/github/license/johnreyes96/design-patterns?style=plastic)
+
 Design patterns done in Java with OOP paradigm.
 
 ## Design patterns
