@@ -1,5 +1,7 @@
 package main.java.app;
 
+import main.java.constant.PetTypeEnum;
+import main.java.constant.ServiceEnum;
 import main.java.service.CatService;
 import main.java.service.DogService;
 import main.java.service.ServiceAbstract;
@@ -33,17 +35,17 @@ public class Application {
     }
 
     private static void initServiceInstance(String petType) {
-        if ("perro".equalsIgnoreCase(petType)) {
+        if (PetTypeEnum.DOG.getName().equalsIgnoreCase(petType)) {
             serviceAbstract = new DogService();
-        } else if ("gato".equalsIgnoreCase(petType)) {
+        } else if (PetTypeEnum.CAT.getName().equalsIgnoreCase(petType)) {
             serviceAbstract = new CatService();
         }
     }
 
     private static void selectService(String service) {
-        if ("peluqueria".equalsIgnoreCase(service)) {
+        if (ServiceEnum.HAIRDRESSER.getName().equalsIgnoreCase(service)) {
             serviceAbstract.hairdresser();
-        } else if ("cortar uñas".equalsIgnoreCase(service)) {
+        } else if (ServiceEnum.CUTNAILS.getName().equalsIgnoreCase(service)) {
             serviceAbstract.cutNails();
         }
     }
