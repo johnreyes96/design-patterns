@@ -22,9 +22,13 @@ public class Application {
     }
 
     private static void doService() {
-        System.out.println("¿Que servicio desea realizar?");
-        System.out.println("Peluqueria\nCortar uñas");
-        selectService(scanner.nextLine());
+        String service;
+        do {
+            System.out.println("\n¿Que servicio desea realizar?");
+            System.out.println("Peluqueria\nCortar uñas\nFinalizar");
+            service = scanner.nextLine();
+            selectService(service);
+        } while (!"finalizar".equalsIgnoreCase(service));
     }
 
     private static void initServiceInstance(String petType) {
