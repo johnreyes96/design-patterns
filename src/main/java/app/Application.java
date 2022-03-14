@@ -23,7 +23,7 @@ public class Application {
 
     private static void doService() {
         System.out.println("¿Que servicio desea realizar?");
-        System.out.println("Peluqueria");
+        System.out.println("Peluqueria\nCortar uñas");
         selectService(scanner.nextLine());
     }
 
@@ -36,6 +36,8 @@ public class Application {
     private static void selectService(String service) {
         if ("peluqueria".equalsIgnoreCase(service)) {
             serviceAbstract.hairdresser();
+        } else if ("cortar uñas".equalsIgnoreCase(service)) {
+            serviceAbstract.cutNails();
         }
     }
 }

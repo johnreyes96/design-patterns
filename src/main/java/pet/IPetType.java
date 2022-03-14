@@ -9,4 +9,6 @@ public interface IPetType {
     void dryHair();
 
     void combHair();
+
+    void cutNails();
 }

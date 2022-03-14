@@ -12,5 +12,10 @@ public abstract class ServiceAbstract {
         petType.combHair();
     }
 
+    public void cutNails() {
+        IPetType petType = selectPet();
+        petType.cutNails();
+    }
+
     public abstract IPetType selectPet();
 }

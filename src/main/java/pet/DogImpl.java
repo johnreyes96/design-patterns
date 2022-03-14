@@ -21,4 +21,9 @@ public class DogImpl implements IPetType {
     public void combHair() {
         System.out.println("Peinando el cabello con peinilla");
     }
+
+    @Override
+    public void cutNails() {
+        System.out.println("Cortando uñas");
+    }
 }
