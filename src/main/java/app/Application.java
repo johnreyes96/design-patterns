@@ -1,17 +1,16 @@
 package main.java.app;
 
-import main.java.constant.PetTypeEnum;
 import main.java.constant.ServiceEnum;
-import main.java.service.CatService;
-import main.java.service.DogService;
 import main.java.service.ServiceAbstract;
+import main.java.service.ServiceAbstractFactoryImpl;
 
 import java.util.Scanner;
 
 public class Application {
 
-    private static ServiceAbstract serviceAbstract;
+    private static final ServiceAbstractFactoryImpl serviceAbstractFactory = new ServiceAbstractFactoryImpl();
     private static final Scanner scanner = new Scanner(System.in);
+    private static ServiceAbstract serviceAbstract;
 
     public static void main(String[] args) {
         inPet();
@@ -21,7 +20,7 @@ public class Application {
     private static void inPet() {
         System.out.println("¿Que tipo de mascota ingresa?");
         System.out.println("Perro\nGato");
-        initServiceInstance(scanner.nextLine());
+        serviceAbstract = serviceAbstractFactory.getInstanceServiceAbstract(scanner.nextLine());
     }
 
     private static void doService() {
@@ -32,14 +31,6 @@ public class Application {
             service = scanner.nextLine();
             selectService(service);
         } while (!"finalizar".equalsIgnoreCase(service));
-    }
-
-    private static void initServiceInstance(String petType) {
-        if (PetTypeEnum.DOG.getName().equalsIgnoreCase(petType)) {
-            serviceAbstract = new DogService();
-        } else if (PetTypeEnum.CAT.getName().equalsIgnoreCase(petType)) {
-            serviceAbstract = new CatService();
-        }
     }
 
     private static void selectService(String service) {
