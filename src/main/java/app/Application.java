@@ -1,5 +1,6 @@
 package main.java.app;
 
+import main.java.service.CatService;
 import main.java.service.DogService;
 import main.java.service.ServiceAbstract;
 
@@ -17,7 +18,7 @@ public class Application {
 
     private static void inPet() {
         System.out.println("¿Que tipo de mascota ingresa?");
-        System.out.println("Perro");
+        System.out.println("Perro\nGato");
         initServiceInstance(scanner.nextLine());
     }
 
@@ -34,6 +35,8 @@ public class Application {
     private static void initServiceInstance(String petType) {
         if ("perro".equalsIgnoreCase(petType)) {
             serviceAbstract = new DogService();
+        } else if ("gato".equalsIgnoreCase(petType)) {
+            serviceAbstract = new CatService();
         }
     }
 
