@@ -8,7 +8,7 @@ public class DogService extends CreatorServiceAbstract {
     private IService dog;
 
     @Override
-    public IService selectPetType() {
+    public IService createService() {
         if (dog == null) {
             dog = new DogImpl();
         }
