@@ -2,13 +2,13 @@ package main.java.factorymethodpattern.app;
 
 import main.java.factorymethodpattern.service.CatService;
 import main.java.factorymethodpattern.service.DogService;
-import main.java.factorymethodpattern.service.ServiceAbstract;
+import main.java.factorymethodpattern.service.CreatorServiceAbstract;
 
 import java.util.Scanner;
 
 public class Application {
 
-    private static ServiceAbstract serviceAbstract;
+    private static CreatorServiceAbstract creatorServiceAbstract;
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -34,17 +34,17 @@ public class Application {
 
     private static void initServiceInstance(String petType) {
         if ("perro".equalsIgnoreCase(petType)) {
-            serviceAbstract = new DogService();
+            creatorServiceAbstract = new DogService();
         } else if ("gato".equalsIgnoreCase(petType)) {
-            serviceAbstract = new CatService();
+            creatorServiceAbstract = new CatService();
         }
     }
 
     private static void selectService(String service) {
         if ("peluqueria".equalsIgnoreCase(service)) {
-            serviceAbstract.hairdresser();
+            creatorServiceAbstract.hairdresser();
         } else if ("cortar uñas".equalsIgnoreCase(service)) {
-            serviceAbstract.cutNails();
+            creatorServiceAbstract.cutNails();
         }
     }
 }

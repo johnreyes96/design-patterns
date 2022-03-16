@@ -1,6 +1,6 @@
 package main.java.factorymethodpattern.pet;
 
-public class DogImpl implements IPetType {
+public class DogImpl implements IService {
 
     @Override
     public void cutHair() {

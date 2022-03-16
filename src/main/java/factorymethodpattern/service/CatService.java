@@ -1,14 +1,14 @@
 package main.java.factorymethodpattern.service;
 
 import main.java.factorymethodpattern.pet.CatImpl;
-import main.java.factorymethodpattern.pet.IPetType;
+import main.java.factorymethodpattern.pet.IService;
 
-public class CatService extends ServiceAbstract {
+public class CatService extends CreatorServiceAbstract {
 
-    private IPetType cat;
+    private IService cat;
 
     @Override
-    public IPetType selectPetType() {
+    public IService selectPetType() {
         if (cat == null) {
             cat = new CatImpl();
         }
