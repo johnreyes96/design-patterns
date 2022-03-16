@@ -1,4 +1,4 @@
-package main.java.pet;
+package main.java.factorymethodpattern.pet;
 
 public interface IPetType {
 
