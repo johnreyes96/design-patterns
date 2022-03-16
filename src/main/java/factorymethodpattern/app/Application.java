@@ -1,7 +1,7 @@
 package main.java.factorymethodpattern.app;
 
-import main.java.constant.PetTypeEnum;
-import main.java.constant.ServiceEnum;
+import main.java.factorymethodpattern.constant.PetTypeEnum;
+import main.java.factorymethodpattern.constant.ServiceEnum;
 import main.java.factorymethodpattern.service.CatService;
 import main.java.factorymethodpattern.service.DogService;
 import main.java.factorymethodpattern.service.CreatorServiceAbstract;
