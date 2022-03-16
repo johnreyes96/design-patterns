@@ -1,6 +1,6 @@
 package main.java.factorymethodpattern.pet;
 
-public class CatImpl implements IPetType {
+public class CatImpl implements IService {
 
     @Override
     public void cutHair() {

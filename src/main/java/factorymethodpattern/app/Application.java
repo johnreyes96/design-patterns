@@ -4,13 +4,13 @@ import main.java.constant.PetTypeEnum;
 import main.java.constant.ServiceEnum;
 import main.java.factorymethodpattern.service.CatService;
 import main.java.factorymethodpattern.service.DogService;
-import main.java.factorymethodpattern.service.ServiceAbstract;
+import main.java.factorymethodpattern.service.CreatorServiceAbstract;
 
 import java.util.Scanner;
 
 public class Application {
 
-    private static ServiceAbstract serviceAbstract;
+    private static CreatorServiceAbstract creatorServiceAbstract;
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -36,17 +36,17 @@ public class Application {
 
     private static void initServiceInstance(String petType) {
         if (PetTypeEnum.DOG.getName().equalsIgnoreCase(petType)) {
-            serviceAbstract = new DogService();
+            creatorServiceAbstract = new DogService();
         } else if (PetTypeEnum.CAT.getName().equalsIgnoreCase(petType)) {
-            serviceAbstract = new CatService();
+            creatorServiceAbstract = new CatService();
         }
     }
 
     private static void selectService(String service) {
         if (ServiceEnum.HAIRDRESSER.getName().equalsIgnoreCase(service)) {
-            serviceAbstract.hairdresser();
+            creatorServiceAbstract.hairdresser();
         } else if (ServiceEnum.CUTNAILS.getName().equalsIgnoreCase(service)) {
-            serviceAbstract.cutNails();
+            creatorServiceAbstract.cutNails();
         }
     }
 }

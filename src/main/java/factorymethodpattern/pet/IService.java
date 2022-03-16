@@ -1,6 +1,6 @@
 package main.java.factorymethodpattern.pet;
 
-public interface IPetType {
+public interface IService {
 
     void cutHair();
 

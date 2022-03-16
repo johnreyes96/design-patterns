@@ -1,14 +1,14 @@
 package main.java.factorymethodpattern.service;
 
 import main.java.factorymethodpattern.pet.DogImpl;
-import main.java.factorymethodpattern.pet.IPetType;
+import main.java.factorymethodpattern.pet.IService;
 
-public class DogService extends ServiceAbstract {
+public class DogService extends CreatorServiceAbstract {
 
-    private IPetType dog;
+    private IService dog;
 
     @Override
-    public IPetType selectPetType() {
+    public IService selectPetType() {
         if (dog == null) {
             dog = new DogImpl();
         }
