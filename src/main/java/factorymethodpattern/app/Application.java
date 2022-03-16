@@ -1,17 +1,16 @@
 package main.java.factorymethodpattern.app;
 
-import main.java.factorymethodpattern.constant.PetTypeEnum;
 import main.java.factorymethodpattern.constant.ServiceEnum;
-import main.java.factorymethodpattern.service.CatService;
-import main.java.factorymethodpattern.service.DogService;
 import main.java.factorymethodpattern.service.CreatorServiceAbstract;
+import main.java.factorymethodpattern.service.CreatorServiceAbstractFactoryImpl;
 
 import java.util.Scanner;
 
 public class Application {
 
-    private static CreatorServiceAbstract creatorServiceAbstract;
+    private static final CreatorServiceAbstractFactoryImpl serviceAbstractFactory = new CreatorServiceAbstractFactoryImpl();
     private static final Scanner scanner = new Scanner(System.in);
+    private static CreatorServiceAbstract creatorServiceAbstract;
 
     public static void main(String[] args) {
         inPet();
@@ -21,7 +20,7 @@ public class Application {
     private static void inPet() {
         System.out.println("¿Que tipo de mascota ingresa?");
         System.out.println("Perro\nGato");
-        initServiceInstance(scanner.nextLine());
+        creatorServiceAbstract = serviceAbstractFactory.getInstanceServiceAbstract(scanner.nextLine());
     }
 
     private static void doService() {
@@ -32,14 +31,6 @@ public class Application {
             service = scanner.nextLine();
             selectService(service);
         } while (!"finalizar".equalsIgnoreCase(service));
-    }
-
-    private static void initServiceInstance(String petType) {
-        if (PetTypeEnum.DOG.getName().equalsIgnoreCase(petType)) {
-            creatorServiceAbstract = new DogService();
-        } else if (PetTypeEnum.CAT.getName().equalsIgnoreCase(petType)) {
-            creatorServiceAbstract = new CatService();
-        }
     }
 
     private static void selectService(String service) {
