@@ -1,4 +1,4 @@
-package main.java.service;
+package main.java.factorymethodpattern.service;
 
 public interface IServiceAbstractFactory {
 

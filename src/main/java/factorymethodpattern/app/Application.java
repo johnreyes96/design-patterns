@@ -1,8 +1,8 @@
-package main.java.app;
+package main.java.factorymethodpattern.app;
 
 import main.java.constant.ServiceEnum;
-import main.java.service.ServiceAbstract;
-import main.java.service.ServiceAbstractFactoryImpl;
+import main.java.factorymethodpattern.service.ServiceAbstract;
+import main.java.factorymethodpattern.service.ServiceAbstractFactoryImpl;
 
 import java.util.Scanner;
 

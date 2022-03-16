@@ -1,4 +1,4 @@
-package main.java.service;
+package main.java.factorymethodpattern.service;
 
 import main.java.constant.PetTypeEnum;
 
