@@ -5,17 +5,17 @@ import main.java.constant.PetTypeEnum;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ServiceAbstractFactoryImpl implements IServiceAbstractFactory {
+public class CreatorServiceAbstractFactoryImpl implements ICreatorServiceAbstractFactory {
 
-    private final Map<String, ServiceAbstract> mapService = new HashMap<>();
+    private final Map<String, CreatorServiceAbstract> mapService = new HashMap<>();
 
-    public ServiceAbstractFactoryImpl() {
+    public CreatorServiceAbstractFactoryImpl() {
         mapService.put(PetTypeEnum.DOG.getName().toLowerCase(), new DogService());
         mapService.put(PetTypeEnum.CAT.getName().toLowerCase(), new CatService());
     }
 
     @Override
-    public ServiceAbstract getInstanceServiceAbstract(String service) {
+    public CreatorServiceAbstract getInstanceServiceAbstract(String service) {
         return mapService.get(service.toLowerCase());
     }
 }
