@@ -8,7 +8,7 @@ public class CatService extends CreatorServiceAbstract {
     private IService cat;
 
     @Override
-    public IService selectPetType() {
+    public IService createService() {
         if (cat == null) {
             cat = new CatImpl();
         }

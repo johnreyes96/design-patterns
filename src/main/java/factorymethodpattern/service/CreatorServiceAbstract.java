@@ -5,7 +5,7 @@ import main.java.factorymethodpattern.pet.IService;
 public abstract class CreatorServiceAbstract {
 
     public void hairdresser() {
-        IService petType = selectPetType();
+        IService petType = createService();
         petType.cutHair();
         petType.washHair();
         petType.dryHair();
@@ -13,9 +13,9 @@ public abstract class CreatorServiceAbstract {
     }
 
     public void cutNails() {
-        IService petType = selectPetType();
+        IService petType = createService();
         petType.cutNails();
     }
 
-    public abstract IService selectPetType();
+    public abstract IService createService();
 }
