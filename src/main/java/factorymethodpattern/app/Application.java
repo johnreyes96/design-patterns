@@ -1,6 +1,6 @@
 package main.java.factorymethodpattern.app;
 
-import main.java.constant.ServiceEnum;
+import main.java.factorymethodpattern.constant.ServiceEnum;
 import main.java.factorymethodpattern.service.CreatorServiceAbstract;
 import main.java.factorymethodpattern.service.CreatorServiceAbstractFactoryImpl;
 

@@ -1,6 +1,6 @@
 package main.java.factorymethodpattern.service;
 
-import main.java.constant.PetTypeEnum;
+import main.java.factorymethodpattern.constant.PetTypeEnum;
 
 import java.util.HashMap;
 import java.util.Map;

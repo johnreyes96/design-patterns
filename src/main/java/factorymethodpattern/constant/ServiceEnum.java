@@ -1,4 +1,4 @@
-package main.java.constant;
+package main.java.factorymethodpattern.constant;
 
 public enum ServiceEnum {
 
