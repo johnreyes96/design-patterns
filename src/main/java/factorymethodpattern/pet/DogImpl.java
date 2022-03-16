@@ -1,15 +1,15 @@
-package main.java.pet;
+package main.java.factorymethodpattern.pet;
 
-public class CatImpl implements IPetType {
+public class DogImpl implements IPetType {
 
     @Override
     public void cutHair() {
-        System.out.println("Cortando el cabello con máquina");
+        System.out.println("Cortando el cabello con tijeras");
     }
 
     @Override
     public void washHair() {
-        System.out.println("Lavando el cabello con agua caliente");
+        System.out.println("Lavando el cabello con agua fría y shampoo de perro");
     }
 
     @Override

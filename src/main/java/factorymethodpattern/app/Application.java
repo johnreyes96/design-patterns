@@ -1,8 +1,8 @@
-package main.java.app;
+package main.java.factorymethodpattern.app;
 
-import main.java.service.CatService;
-import main.java.service.DogService;
-import main.java.service.ServiceAbstract;
+import main.java.factorymethodpattern.service.CatService;
+import main.java.factorymethodpattern.service.DogService;
+import main.java.factorymethodpattern.service.ServiceAbstract;
 
 import java.util.Scanner;
 
