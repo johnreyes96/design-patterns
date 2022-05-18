@@ -6,6 +6,7 @@ Design patterns done in Java with OOP paradigm.
 
 ## Design patterns
 * Factory Method
+* Strategy (Soon)
 
 ## Tecnologies and tools
 * Java 17 [download here](https://www.oracle.com/java/technologies/downloads/#jdk17-windows)
